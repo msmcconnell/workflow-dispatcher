@@ -29,6 +29,10 @@ inputs:
     description: 'Maximum amount of time to wait for workflow (seconds)'
     default: "600"
     required: false
+  use_timout:
+    description: 'If true, then timeout will be checked for. If false, then timeout will be ignored and workflow will immeadiatly return success.'
+    default: true
+    required: false
 outputs:
   workflow-id:
     description: "ID of the triggered workflow"
@@ -51,3 +55,4 @@ runs:
         INPUT_CLIENT_PAYLOAD: ${{ inputs.client_payload }}
         INPUT_WAIT_TIME: ${{ inputs.wait_time }}
         INPUT_MAX_TIME: ${{ inputs.max_time }}
+        INPUT_USE_TIMEOUT: ${{ inputs.use_timeout }}
