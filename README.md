@@ -36,6 +36,7 @@ When creating a workflow which deploys an entire distributed application in one 
 | `wait_time`       | False      | `10`      | The number of seconds delay between checking for the result of the target workflow. |
 | `max_time`        | False      | `600`    | Maximum amount of time to wait for workflow to complete (seconds). |
 | `client_payload`  | False      | `"{}"`    | Payload for the repository dispatch event. Usually used for passing a Git Ref to the target workflow. |
+| `use_timeout`  | False      | `true`    | If true, then timeout will be checked for. If false, then timeout will be ignored and workflow will immeadiatly return success. |
 
 ## Outputs
 
