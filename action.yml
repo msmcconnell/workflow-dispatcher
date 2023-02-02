@@ -29,7 +29,7 @@ inputs:
     description: 'Maximum amount of time to wait for workflow (seconds)'
     default: "600"
     required: false
-  use_timout:
+  use_timeout:
     description: 'If true, then timeout will be checked for. If false, then timeout will be ignored and workflow will immeadiatly return success.'
     default: true
     required: false
