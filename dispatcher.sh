@@ -99,7 +99,12 @@ function main {
   # Start by triggering the workflow, then find the ID of the workflow which was just triggered and finally, wait until it completes.
   trigger_workflow
   find_workflow
-  wait_on_workflow
+  if [ "$INPUT_USE_TIMEOUT" = "true" ]; then
+    wait_on_workflow
+  else
+    echo "use_timeout set to false. Workflow dispatch was sent but workflow completion not checked."
+  fi
+  
 }
 
 main
